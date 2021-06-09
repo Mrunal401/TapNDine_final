@@ -2,6 +2,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_cust/constants.dart';
 import 'package:my_cust/screens/home_page.dart';
 import 'package:my_cust/screens/product_page.dart';
+import 'package:my_cust/screens/update_page.dart';
 import 'package:my_cust/services/firebase_services.dart';
 import 'package:my_cust/widgets/amt_txtfield.dart';
 import 'package:my_cust/widgets/custom_action_bar.dart';
@@ -82,7 +83,7 @@ class _CartPageState extends State<CartPage> {
     Toast.show("External Wallet", context);
   }
 
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -200,7 +201,7 @@ class _CartPageState extends State<CartPage> {
 
                                               IconButton(icon: Icon(FontAwesomeIcons.edit, size: 15,), onPressed: () async{
                                                 Navigator.push(context, MaterialPageRoute(
-                                                    builder: (context) => ProductPage(productId: document.id,)));
+                                                    builder: (context) => UpdatePage(productId: document.id,)));
                                               }),
 
                                               IconButton(icon: Icon(FontAwesomeIcons.trashAlt, size: 15,), onPressed: () async{
