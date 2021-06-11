@@ -3,6 +3,7 @@ import 'package:my_cust/services/firebase_services.dart';
 import 'package:my_cust/widgets/custom_action_bar.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SavedTab extends StatelessWidget {
 
@@ -112,6 +113,10 @@ class SavedTab extends StatelessWidget {
                                                 fontWeight: FontWeight.w600),
                                           ),
                                         ),
+                                        IconButton(icon: Icon(FontAwesomeIcons.trashAlt, size: 15,), onPressed: () async{
+                                          var CollectionReference = _firebaseServices.usersRef.doc(_firebaseServices.getUserId()).collection("Saved");
+                                          await CollectionReference.doc(document.id).delete();
+                                        }),
                                         /*Text(
                                           "Size - ${document.data()['size']}",
                                           style: TextStyle(

@@ -4,7 +4,6 @@ import 'package:my_cust/screens/home_page.dart';
 import 'package:my_cust/screens/product_page.dart';
 import 'package:my_cust/screens/update_page.dart';
 import 'package:my_cust/services/firebase_services.dart';
-import 'package:my_cust/widgets/amt_txtfield.dart';
 import 'package:my_cust/widgets/custom_action_bar.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -52,7 +51,8 @@ class _CartPageState extends State<CartPage> {
 
   void openCheckout() {
     var options = {
-      'key': 'rzp_test_1TFFh7whyqz6Br',
+      'key': 'rzp_test_4sD5QQ7bXUF7Mn',
+      //'key': 'rzp_test_6JPsz7KYt08oqX',
       'amount': num.parse(textEditingController.text)*100,
       'name': num.parse(tabletextEditingController.text),
       'description': 'Pay',
